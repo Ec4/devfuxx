@@ -22,7 +22,7 @@ $ sudo insmod devfuxx.ko
 I wrote the parser example.
 You can use this after compiling *bf\_compiler.c*.
 ```
-$ cc bf_interpreter.c -o bfc
+$ cc bf_interpreter.c -o bfi
 $ ./bfi hello.bf
 Hello world!
 ```
