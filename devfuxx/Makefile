@@ -1,10 +1,12 @@
 obj-m := devfuxx.o
 
-ROOTDIR  := /tmp/linux-4.12
+KERNELVER ?= $(shell uname -r)
+KERNELDIR ?= /lib/modules/$(KERNELVER)/build
+
 PWD   := $(shell pwd)
 
 default:
-	$(MAKE) -C $(ROOTDIR) M=$(PWD) modules
+	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules
 
 clean:
-	$(MAKE) -C $(ROOTDIR) M=$(PWD) modules clean
+	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules clean
