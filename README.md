@@ -1,6 +1,6 @@
 ## What is devfuxx? ##
 
-*devfuxx* is a Brainf\*ck compiler that behaves as a character device driver.
+*devfuxx* is a Brainf\*ck interpreter that behaves as a character device driver.
 
 
 ## Install ##
@@ -22,7 +22,7 @@ $ sudo insmod devfuxx.ko
 I wrote the parser example.
 You can use this after compiling *bf\_compiler.c*.
 ```
-$ cc bf_compiler.c -o bfc
-$ ./bfc hello.bf
+$ cc bf_interpreter.c -o bfc
+$ ./bfi hello.bf
 Hello world!
 ```
